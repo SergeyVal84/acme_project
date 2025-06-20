@@ -7,6 +7,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # Подключаем urls.py приложения для работы с пользователями.
+    path('auth/', include('django.contrib.auth.urls')),
     path('', include('pages.urls')),
     path('admin/', admin.site.urls),
     path('birthday/', include('birthday.urls')),
